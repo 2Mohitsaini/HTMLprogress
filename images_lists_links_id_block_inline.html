@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-UK">
+    <title>HTML Images</title>
+<head>
+<style>
+p{
+font-size: 20px;
+font-family: cursive;
+}
+.imagesize{
+width: 300px;
+height: 300px;
+border-radius: 150px;
+border: 1px solid salmon;
+}
+.center{
+display: block;
+margin-left: auto;
+margin-right: auto; 
+}
+div{
+background-image: url('background.jpg');
+}
+h2{
+background-color: lightcoral;"
+}
+
+</style>
+</head>
+<body style="background-color: lavender;">
+<h1 style="text-align: center; background-color: silver;">HTML Images</h1>
+
+<p style="background-color: slategray;">
+    <a href="#imageSyntax">Image Syntax</a>
+    <a href="#imageFloating">Image Floating</a>
+    <a href="imageMap">Image Map</a>
+    <a href="backgroundImage">Backgound Image</a></p>
+<p>Images can improve the design and the appearance of a web page.</p>
+<img class="imagesize" src="football_ground.jpg" alt="Football ground">
+
+<h2 id="imageSyntax">HTML Images syntax</h2>
+<p>The HTML &lt;img&gt; tag is used to embed an image in a webpage</p>
+<p>Images are not technically inserted into a web page; images are linked to  webpages. The &lt;img&gt; tag creates a<br>
+holding space for the refrenced image.</p>
+<p style="color:salmon;"> The &lt;img&gt; tag has two required attributes:</p>
+<p>1.<b>src</b>- Specifies the path to the image<br>
+2.<b>alt-</b> Specifies an alternate text for the image.</p>
+
+<h2 id="imageFloating">Image floating</h2>
+<p>This property of CSS is useful when you want image around a text like text below, above, left or right to image<br>
+Below is the example for it:</p>
+<p><img style="float:left;border: 2px solid salmon; border-radius:100%" src="ritviz.jpg" alt="Ritviz show" width="180px" height="90px" >
+This image will float to left and text wil be<br>
+at the right side of the image.<br>
+now I want to inline the text to image how to do it. let's see.</p>
+
+<h2 id="imageMap">HTML Image Map</h2>
+<p>With HTML map page, you can create a clickable areas on an image.</p>
+<h3>Image Maps</h3>
+<p>The HTML &lt;map&gt; tag defines an image map. An Image map is an image with clickable areas.<br>
+The areas are defined with one or more &lt;area&gt;</p>
+
+<img src="sample.jpg" alt="workplace" class="imagesize center" usemap="#workmap" >
+
+<h2 id="backgroundImage">Background Image</h2>
+<div><p>I'm Using blocker and the<br>
+background image will only be <br>
+visible till I right bcoj of div tag I'm using.<br>
+Now I've learnt about the span also<br>
+<span style="color: red;font-size: 30px>;">This is written in span</span><br>
+Span is mostly used when we want to use it in-inline but div tag is used for a block<br>
+Background image can be used for full page for or for some tag. To use it in fullpage define background-image in body tag.<br>
+In background-image I can use</p></div>
+<div>
+<ul style="font-size: 18px;">
+    <li>background-image:</li>
+    <li>background-repeat:</li>
+    <li>background-attachment:</li>
+    <li>background-size:</li>
+</ul>
+<p>The above part is written with Unordered list, we can use ordered list also for that we have to use 'ol' instead of 'ul'</p></div>
+
+<h2>HTML &lt;picture&gt; Element</h2>
+<p>The HTML picture element allows you to display pictures for different devices or screen sizes</p>
+      
+</body>
+</html>
