@@ -1,0 +1,28 @@
+#table1{
+    font-family: Verdana;
+    border-collapse: collapse;
+    width: 60%;
+}
+td,th{
+    border:2px solid rgb(19, 18, 18);
+    text-align: left;
+    padding:5px;
+    color: brown; 
+}
+tr:nth-child(even){
+    background-color: gray;
+}
+body{
+    background-color:gainsboro;
+}
+#table2{
+    font-family: monospace;
+    border-spacing: 10px;
+    border: 2px solid black;
+    width:60%;
+}
+#table3{
+    font-family: Verdana;
+    border-collapse: collapse;
+    width: 60%;
+}
