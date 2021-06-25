@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+    <style>
+        span{
+            color: red;
+            background-color:whitesmoke;
+            width: fit-content;
+        }
+        h2{
+            background-color: wheat;
+            width:fit-content;
+        }
+    </style>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; background-color: rgb(204, 213, 233);">
+    <h1>HTML Form Elements</h1>
+    <p>This page will describe all the different HTML form elements.</p>
+    <hr>
+    <p>The HTML <span>&lt;form&gt;</span> element can contain one or more of the following elemnents:</p>
+    <ul style="color: red;">
+        <li>&lt;input&gt;</li>
+        <li>&lt;label&gt;</li>
+        <li>&lt;select&gt;</li>
+        <li>&lt;textarea&gt;</li>
+        <li>&lt;button&gt;</li>
+        <li>&lt;fieldset&gt;</li>
+        <li>&lt;legend&gt;</li>
+        <li>&lt;datalist&gt;</li>
+        <li>&lt;output&gt;</li>
+        <li>&lt;option&gt;</li>
+        <li>&lt;optgroup&gt;</li>
+    </ul>
+    <hr>
+    <h2>The &lt;input&gt; Element</h2>
+    <p>One of the most common form element is the <span>input</span> element.</p>
+    <p>The &lt;input&gt; element can be displayed in several ways, depeding on the <span>type</span> of attribute.</p>
+    <p>Some of them are already discussed, in next page will discuss more of them.</p>
+    <hr>
+    <h2>The&lt;label&gt; Element</h2>
+    <p>The <span>label</span> element defines a label for several form elements</p>
+    <p>The <span>label</span> element is useful for screen-reader users, because the screen-readerwill read out loud the label when the
+        user focus on the input element.</p>
+    <p>The <span>label</span> element also help users who have difficulty clicking on small regions (such as radio buttons or checkboxes)
+        because when the user clicks the text within the <span>label</span>element, it toggles the radio button/checkbox.</p>
+    <p>The <span>for</span> attribute of the <span>label</span> tag should be equal to the <span>id</span> attribute of the <span>input</span> element to bind them together.</p>
+    <hr>
+    <h2>The &lt;select&gt; Element</h2>
+    <p>The <span>select</span> element defines a drop-down list.</p>
+    <p>Example:</p>
+    <form>
+        <label for="cars">Choose car</label>
+        <select id="cars" name="cars">
+            <option value="Volvo">Volvo</option>
+            <option value="Safari">Safari</option>
+            <option value="BMW">BMW</option>
+            <option value="Honda">Honda</option>
+        </select>
+        <input type="submit" value="Submit Option">
+    </form>
+    <hr>
+    <p>The &lt;option&gt; element defines an option that can be selected.</p>
+    <p>By default, the 1st item in the drop-down list is selected.</p>
+    <p>To define a pre-selected option, add the <span>selected</span> attribute to the option</p>
+    <p>Example</p>
+    <form>
+        <label for="cars">Choose car</label>
+        <select id="cars" name="cars">
+            <option value="Volvo">Volvo</option>
+            <option value="Safari">Safari</option>
+            <option value="BMW" selected>BMW</option>
+            <option value="Honda">Honda</option>
+        </select>
+        <input type="submit" value="Submit Option">
+    </form>
+    <h3>Visible values</h3>
+    <p>Use the <span>size</span> attribute to specify the number of visible values:</p>
+    <p>Example</p>
+    <form>
+        <label for="cars">Choose car</label>
+        <select id="cars" name="cars" size="4">
+            <option value="Volvo">Volvo</option>
+            <option value="Safari">Safari</option>
+            <option value="BMW" selected>BMW</option>
+            <option value="Honda">Honda</option>
+        </select>
+        <input type="submit" value="Submit Option">
+    </form>
+    <h3>Allow Multiple Selections</h3>
+    <p>Use the <span>multiple</span> attribute to allow the user to select more than 1 value.</p>
+    <p>Example</p>
+    <form>
+        <label for="cars">Choose car</label>
+        <select id="cars" name="cars" multiple>
+            <option value="Volvo">Volvo</option>
+            <option value="BMW">BMW</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Ford">Ford</option>
+            <option value="Maruti">Maruti</option>
+        </select>
+        <input type="submit" value="Submit Multiple values">
+    </form>
+    <p>Hold the ctrl button to choose multiple values</p>
+    <hr>
+    <h2>The &lt;textarea&gt; Element</h2>
+    <p>The 'textarea' element defines a multi-line input field(a text area).</p>
+    <p>Exaxmple;</p>
+    <form>
+        <textarea name="message" rows="10" cols="100" style="width:400px; height: 100px; background-color: aquamarine;">
+            Hello, My name is
+        </textarea><br>
+        <input type="submit" value="Submit detail">
+    </form>
+    <p>The <span>rows</span> attribute specifies the number of visible lines in a text area.</p>
+    <p>The <span>cols</span> attribute specifies the visible width of a text area.</p>
+    <p>You can also define the size of the text area using CSS.</p>
+    <hr>
+    <h2>The &lt;button&gt; Element</h2>
+    <p>The <span>&lt;button&gt;</span> element defines a clickable button.</p>
+    <p>Example</p>
+    <button type="button" onclick="alert('Message me')">Don't Click</button>
+    <p><strong>Note:</strong> Always specify the <span>type</span> attribute for the button element.
+            Different browsers may use different defualt types for the button element.</p>
+    <hr>
+    <h2>The &lt;fieldset&gt; and &lt;legend&gt; Elements</h2>
+    <p>The <span>&lt;fieldset&gt;</span> element is used to group related data in a form.</p>
+    <p>The <span>&lt;legend&gt;</span> elements defines a cption for the <span>&lt;fieldset&gt;</span> element.</p>
+    <p>Example</p>
+    <form>
+        <fieldset>
+            <legend>Info</legend>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <p>The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.</p>
+    <hr>
+    <h2>The &lt;datalist&gt; Element</h2>
+    <p>The <span>&lt;datalist&gt;</span> element specifies a list of pre-defined options for an <span>&lt;input&gt;</span> element.</p>
+    <p>User will see a drop-down list of the pre-defined options as they input data.</p>
+    <p>The <span>list</span> attribute of the <span>&lt;input&gt;</span> element, must refer to the <span>id</span> attribute of the 
+        <span>&lt;datalist&gt;</span> element.</p>
+    <form>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Brave"></option>
+            <option value="Edge"></option>
+            <option value="Google chrome"></option>
+            <option>Opera</option>
+        </datalist>
+        <input type="submit">
+    </form>
+    <br>
+    <hr>
+    <h2>The &lt;output&gt; element</h2>
+    <p>The <span>&lt;output&gt;</span> element represents the result of a calculation (like one performed by a script)</p>
+    <input type="range">
+
+</body>
+</html>
