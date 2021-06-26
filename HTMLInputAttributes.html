@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input attributes</title>
+    <style>
+        body{
+            background-color: gainsboro;
+            font-family: sans-serif;
+            font-size: 18px;
+        
+        }
+        span{
+            color: firebrick;
+            background-color:lightgrey;
+        }
+        h2{
+            background-color: lightyellow;
+            width: fit-content;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Input Attributes</h1>
+    <p>In this we will discuss the different attributes for the HTML <span>&lt;input&gt;</span> element.</p>
+    <hr>
+    <h2>The Value Attribute</h2>
+    <p>The input <span>value</span> attribute specifies the initial value for an input field.</p>
+    <hr>
+    <h2>The Readonly Attribute</h2>
+    <p>The input <span>readonly</span> attribute specifies that an input field is read-only.</p>
+    <p>The read-only input field cannot be modified (homepage, a user can tab to it, highlight it and copy the text from it).<br>
+    The value of a read-only input field will be sent when submitting the form.<br>
+    Example:</p>
+    <form>
+        <label for="fname">First Name: </label><br>
+        <input type="text" id="fname" value="Mohit" name="fname" readonly><br>
+        <label for="lname">Last Name: </label><br>
+        <input type="text" id="lname" value="Saini" name="lname" ><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The disabled Attribute</h2>
+    <p>The input <span>disabled</span> attribute specifies an input field should be disabled.<br>
+    A disabled input field is unusable and un-clickable.<br>
+    The value of diabled input field will not be sent when submitting the form.<br>
+    Exxample:</p>
+    <form>
+        <input type="radio" id="car" name="vehicle" value="cars">
+        <label for="car">Cars</label><br>
+        <input type="radio" id="bike" value="Bike" name="vehicle">
+        <label for="bike">Bikes</label><br>
+        <input type="radio" id="bicycle" value="bicycle" name="vehicle" disabled>
+        <label for="bicycle">Bicycle</label><br>
+        <input type="submit">
+    </form>
+    <p>The <span>name</span> attribute should be same when using input="range".</p>
+        <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS" disabled>
+        <label for="css">CSS</label><br>
+        <input type="radio" id="java" name="fav_language" value="JAVA">
+        <label for="java">JAVA</label><br>
+        <input type="radio" id="angular" name="fav_language" value="ANGULAR">
+        <label for="angular">ANGULAR</label><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The size Attribute</h2>
+    <p>The <span>size</span> attribute specifies the visible width, in characters of an input field.<br>
+    The default value for <span>size</span> is 20.<br>
+    <b>Note:</b> The <span>size</span> attribute works with the following input: text, search, tel, url, email and password.</p>
+    <form>
+        <label for="funame">Full Name: </label><br>
+        <input type="text" id="funame" name="funame" size="50"><br>
+        <label for="pin">PIN:</label><br>
+        <input type="text" id="pin" name="pin" size="4"><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The maxlength Attribute</h2>
+    <p>The <span>maxlength</span> attributes specifies the maximum number of characters allowed in an input field.<br>
+    <b>Note:</b> When a <span>maxlength</span> is set, the input field will not accept more than the specified number of characters.<br>
+    However, this attribute does not provide any feedback. So if you want to alert the user, you must write JavaScript code.</p>
+    <form>
+        <label for="funame">Full Name: </label><br>
+        <input type="text" id="funame" name="funame" size="50" maxlength="20"><br>
+        <label for="pin">PIN:</label><br>
+        <input type="text" id="pin" name="pin" size="4" maxlength="4"><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The Pattern Attribute</h2>
+    <p>The input <span>pattern</span> attribute specifies a regualar expression that the input-field's value is checked against<br>
+    When the form is submitted.<br>
+    The <span>pattern</span> attribute works with the following input types: text, date, search, url, tel, email and password.</p>
+    <p>Use the global title attribute to describe the pattern to help the user.</p>
+    <p>Example:</p>
+    <form>
+        <label for="country">Country code: </label>
+        <input type="text" id="country" name="country-code" pattern="[A-Za-z]{3}" title="Three letter country code">
+    </form>
+    <hr>
+    <h2>The Placeholder Attribute</h2>
+    <p>The input <span>placeholdere</span> attribute specifies  a short hint that describes the expected value of an input field.<br>
+    A sample value or a short Description of the expected format.<br>
+    The short hint is displayed in the input field before the user enters a value.<br>
+    The <span>placeholder</span> attribute workswith the following input types: text, seacrh, url, tel, email and password.</p>
+    <br>
+    <form>
+        <label for="phone">Phone Number: </label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}">
+    </form>
+    <hr>
+    <h2>The required Attribute</h2>
+    <p>The input <span>required</span> attribute specifies that an input field must be filled out before submitting the form.<br>
+    The <span>required</span> attribute works with the follwing input types: text, search, url, tel, email, password, datepickers, number, checkbox<br>
+    radio,file.</p>
+    <form>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" required>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The Step Attribute</h2>
+    <p>The <span>step</span> attribute specifies the legal number intervals for an input field.<br>
+    Example: if step="3", legal numbers could be -3,0,3,6,etc. <br>
+    <b>Tip:</b> This attribute can be used together with the max and min attributes to create a range of legal values.<br>
+    If <span>step</span> attribute works with the following input types: number, range, date, datetime-local, month, time, and week. </p>
+    <form>
+        <label for="points">For Points:</label><br>
+        <input type="number" id="points" name="points" step="2"><br>
+        <label for="ran">Range: </label><br>
+        <input type="range" id="ran" name="range" min="3" max="51" step="3"><br>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" step="2">
+        <label for="datetime">Date-time Local:</label>
+        <input type="datetime-local" id="datetime" name="datetime" step="3">
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The Autofocus Attribute</h2>
+    <p>The input <span>autofocus</span> attribute specifies that an input field should automatically get focus when the page loads.</p>
+    <p>Example:</p>
+    <form>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" autofocus><br><br>
+        <lable for="lname">Last name:</lable>
+        <input type="text" id="lname"><br><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The Height and Width Attributes</h2>
+    <p>The input <Span>height</Span> and <span>width</span> attribute specify the height and width of an <span>&lt;input type="image"&gt;</span> element.</p>
+    <p><strong>Tip:</strong> Always specify both the height and width attributes for images. If height and width are set, the space <br>
+        required for the image is reserved when the page is loaded. Without these attributes, the browser does not know the size of the <br>
+        image, and cannot reserve the appropriate space to it. The effect will be that the page layout will change during loading <br>
+        (while the images load).<br>
+    Example:</p>
+    <form>
+        <label for="colgname">College Name:</label>
+        <input type="text" id="colgname" name="collegeName"><br>
+        <input type="image" alt="submit" src="photo.jpg" height="30" width="30">
+    </form>
+    <p><b>Note:</b> The input type="image" sends the X and Y coordinates of the click that activated the image button.</p>
+    <hr>
+    <h2>The List attribute</h2>
+    <p>The input <span>list</span> attributes refer to <span>&lt;datalist&gt;</span> element that contains pre-defined options for an input element.</p>
+    <p>Example</p>
+    <form>
+        <label>An input element with predefined values in datalist:<label><br>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Edge"></option>
+            <option value="Brave"></option>
+            <option value="Chrome"></option>
+        </datalist>
+        <input type="submit">
+    </form>
+    <hr>
+    <h2>The Autocomplete Attribute</h2>
+    <p>The <span>autocomplete</span> attribute specifies whether a form or an input field should have autocomplete on or off.<br>
+    Auto complete allows the browser to predict the value. When the user starts to type in a field, the browser should display options<br>
+    to fill in the field, based on earlier typed values.<br>
+    The <span>autocomplete</span> attribute works with <span>form</span> and the following <span>"input"</span> types:text, search, url, tel, email,
+    password, datepickers,range, and color.<br>
+    Example: </p>
+    <form target="_blank">
+        <label for="subject">Subject Name :</label>
+        <input type="text" id="subject" name="subject" autocomplete="off"><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" ><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" autocomplete="on"><br>
+        <input type="submit">
+    </form>
+    <hr>
+    <br>
+
+</body>
+</html>
